@@ -13,13 +13,26 @@ const buttonVariantMap = {
     "ghost",
     "link"
   ],
+  "visual": [
+    "funky",
+    "edgy"
+  ],
   "size": [
     "xs",
-    "sm",
     "md",
-    "lg",
     "xl",
-    "2xl"
+    "2xl",
+    "sm",
+    "lg"
+  ],
+  "shape": [
+    "square",
+    "circle"
+  ],
+  "primary": [
+    "base",
+    "hover",
+    "focus"
   ]
 }
 

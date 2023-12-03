@@ -1,5 +1,4 @@
 export * from './badge.mjs';
-export * from './button.mjs';
 export * from './code.mjs';
 export * from './heading.mjs';
 export * from './icon.mjs';
@@ -9,6 +8,7 @@ export * from './kbd.mjs';
 export * from './label.mjs';
 export * from './link.mjs';
 export * from './textarea.mjs';
+export * from './button.mjs';
 export * from './accordion.mjs';
 export * from './alert.mjs';
 export * from './avatar.mjs';
