@@ -1,6 +1,8 @@
+import { P5brush } from "@/components/P5brush";
 import { Button } from "@/components/ui/button";
 import { css } from "@styled-system/css";
 import { Flex } from "@styled-system/jsx";
+import Script from "next/script";
 
 export default function Home() {
   return (
@@ -11,6 +13,8 @@ export default function Home() {
         <Button variant="outline">Button</Button>
         <Button variant="ghost">Button</Button>
       </Flex>
+      <br />
+      <P5brush />
     </div>
   );
 }
