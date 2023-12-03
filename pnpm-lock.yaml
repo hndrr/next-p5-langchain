@@ -8,24 +8,27 @@ dependencies:
   '@ark-ui/react':
     specifier: ^1.1.0
     version: 1.1.0(@internationalized/date@3.5.0)(react-dom@18.2.0)(react@18.2.0)
-  '@p5-wrapper/next':
-    specifier: ^0.2.0
-    version: 0.2.0(@p5-wrapper/react@4.3.0)(next@14.0.3)(react-dom@18.2.0)(react@18.2.0)
-  '@p5-wrapper/react':
-    specifier: ^4.3.0
-    version: 4.3.0(react-dom@18.2.0)(react@18.2.0)
   langchain:
     specifier: ^0.0.200
     version: 0.0.200
   next:
     specifier: 14.0.3
     version: 14.0.3(react-dom@18.2.0)(react@18.2.0)
+  p5:
+    specifier: ^1.9.0
+    version: 1.9.0
+  p5-brush-react:
+    specifier: ^1.0.2
+    version: 1.0.2(p5@1.9.0)(react-dom@18.2.0)(react@18.2.0)
   react:
     specifier: ^18
     version: 18.2.0
   react-dom:
     specifier: ^18
     version: 18.2.0(react@18.2.0)
+  react-p5:
+    specifier: ^1.4.1
+    version: 1.4.1(react-dom@18.2.0)(react@18.2.0)
 
 devDependencies:
   '@pandacss/dev':
@@ -37,6 +40,9 @@ devDependencies:
   '@types/node':
     specifier: ^20
     version: 20.10.2
+  '@types/p5':
+    specifier: ^1.7.4
+    version: 1.7.4
   '@types/react':
     specifier: ^18
     version: 18.2.41
@@ -620,32 +626,6 @@ packages:
       fastq: 1.15.0
     dev: true
 
-  /@p5-wrapper/next@0.2.0(@p5-wrapper/react@4.3.0)(next@14.0.3)(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-aA6TUDRgBc6czw0MXoOILKt/rm+S8I8I62+e6YWIkq783DGkNfPXR/kbLMpkdphAa2SpMQmJlkYw98iZGqparw==}
-    peerDependencies:
-      '@p5-wrapper/react': '>= 4.2.0'
-      next: '>= 12.3.4'
-      react: '>= 18.2.0'
-      react-dom: '>= 18.2.0'
-    dependencies:
-      '@p5-wrapper/react': 4.3.0(react-dom@18.2.0)(react@18.2.0)
-      next: 14.0.3(react-dom@18.2.0)(react@18.2.0)
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
-  /@p5-wrapper/react@4.3.0(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-Q1kpec+8v2rHL69fHYbSFefQeIeBP6mBBg8mfy6JnqaDkSCv3RwuUSDZyTjoaVQL1ra8MnLwZ9ADC57E5EvyRA==}
-    peerDependencies:
-      react: '>= 18.2.0'
-      react-dom: '>= 18.2.0'
-    dependencies:
-      microdiff: 1.3.2
-      p5: 1.9.0
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-    dev: false
-
   /@pandacss/config@0.19.0:
     resolution: {integrity: sha512-q/Dl6NjmNAEVWAghgqTzzBpeeyRVMU1FvptFRPM1RKfJLYU9c4XN1Z6lnntiwqpK5FJURjCXjNmfuHoBd13NtA==}
     dependencies:
@@ -1100,6 +1080,14 @@ packages:
     resolution: {integrity: sha512-37MXfxkb0vuIlRKHNxwCkb60PNBpR94u4efQuN4JgIAm66zfCDXGSAFCef9XUWFovX2R1ok6Z7MHhtdVXXkkIw==}
     dependencies:
       undici-types: 5.26.5
+
+  /@types/p5@1.7.0:
+    resolution: {integrity: sha512-6AnjmW98/edgXB+pYDBx7t6QbCogIG6NUzey93JpGTZA4096C+KjSN8y0sj43QRd9XtblrAhoRXHj1pFZ2vsCg==}
+    dev: false
+
+  /@types/p5@1.7.4:
+    resolution: {integrity: sha512-cMF3SvlBSzJV9m3enUYBx9UvJmQP9fxmPS17EDtYJVCQwwNMc/BRrDtHUHaxZH+BhuESNuUnfUKNVpJIjRT+Xw==}
+    dev: true
 
   /@types/prop-types@15.7.11:
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
@@ -3779,6 +3767,7 @@ packages:
 
   /microdiff@1.3.2:
     resolution: {integrity: sha512-pKy60S2febliZIbwdfEQKTtL5bLNxOyiRRmD400gueYl9XcHyNGxzHSlJWn9IMHwYXT0yohPYL08+bGozVk8cQ==}
+    dev: true
 
   /micromatch@4.0.5:
     resolution: {integrity: sha512-DMy+ERcEW2q8Z2Po+WNXuw3c5YaUSFjAO5GsJqfEl7UjvtIuFKO6ZrKvcItdy98dwFI2N1tg3zNIdKaQT+aNdA==}
@@ -4060,6 +4049,11 @@ packages:
     resolution: {integrity: sha512-N4YtSYJqghVu4iek2ZUvcN/0aqH1kRDuNqzcycDxhOUpg7GdvLa2F3DgS6yBNhInhv2r/6I0Flkn7CqL8+nIcw==}
     dev: false
 
+  /opencollective-postinstall@2.0.2:
+    resolution: {integrity: sha512-pVOEP16TrAO2/fjej1IdOyupJY8KDUM1CvsaScRbw6oddvpQoOfGk4ywha0HKKVAD6RkW4x6Q+tNBwhf3Bgpuw==}
+    hasBin: true
+    dev: false
+
   /optionator@0.9.3:
     resolution: {integrity: sha512-JjCoypp+jKn1ttEFExxhetCKeJt9zhAgAve5FXHixTvFDW/5aEktX9bufBKLRRMdU7bNtpLfcGu94B3cdEJgjg==}
     engines: {node: '>= 0.8.0'}
@@ -4136,6 +4130,23 @@ packages:
     resolution: {integrity: sha512-R4nPAVTAU0B9D35/Gk3uJf/7XYbQcyohSKdvAxIRSNghFl4e71hVoGnBNQz9cWaXxO2I10KTC+3jMdvvoKw6dQ==}
     engines: {node: '>=6'}
     dev: true
+
+  /p5-brush-react@1.0.2(p5@1.9.0)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-/j6C4EnLerbxcA2iF9FB4NqRc6/c6Gv7EnefHyKqX567TwZ6Nvhr/8UPz9lBFyTIHp4HSRQg46BdwrCXW7Zmog==}
+    peerDependencies:
+      p5: 1.8.0
+      react: ^18.2.0
+      react-dom: ^18.2.0
+    dependencies:
+      p5: 1.9.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      spectral.js: 2.0.2
+    dev: false
+
+  /p5@1.7.0:
+    resolution: {integrity: sha512-qrbT/44Dwm63ZtOKX/mp61pw+5yj6ijYLOmRv7p6zcfjbo83Vb0gVFEvW0kTLFu7hceWCig0HONo9F1bSlqbsQ==}
+    dev: false
 
   /p5@1.9.0:
     resolution: {integrity: sha512-+5/hz0ZokCDf7BMMAeemE7FIo7gFZK7ImL62acHLXZwerGjqj+171bnaAWj4aCFCx6fwysAr2U7/AKuPyPhehA==}
@@ -4353,6 +4364,21 @@ packages:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: true
 
+  /react-p5@1.4.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-njeL8zskkbo8gK3ql1u4/MgmecT/g7Z7LvypTn65DWUnuBvV/9S5AowcKkwQuLVo8/DDAE5vgGVFq1DOkoWiJA==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
+    requiresBuild: true
+    peerDependencies:
+      react: '>= 17.0.1'
+      react-dom: '>= 17.0.1'
+    dependencies:
+      '@types/p5': 1.7.0
+      opencollective-postinstall: 2.0.2
+      p5: 1.7.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: false
+
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
@@ -4530,6 +4556,10 @@ packages:
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
     engines: {node: '>=0.10.0'}
+
+  /spectral.js@2.0.2:
+    resolution: {integrity: sha512-g7NA/GMc2C50ez/foALJW8DcwvwbMgW5WF0/1fmAib5AN8NkJwMVyWgkPeSGAm4D6XAFXdtz9KM4AreuV+hJsg==}
+    dev: false
 
   /sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
